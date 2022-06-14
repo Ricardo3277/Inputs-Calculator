@@ -61,4 +61,19 @@ button {
     margin: 5px;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    background: #262834;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+    outline: none;
+}
+
+.highlight {
+    background: #56cb56;
 }
