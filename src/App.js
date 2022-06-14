@@ -16,6 +16,14 @@ const App = () => {
         setResult(result.slice(0, result.length - 1));
     };
 
+    const calculate = () => {
+        try {
+            setResult(eval(result).toString());
+        } catch (err) {
+            setResult("Error")
+        }
+    }
+
     return ( <
         >
         <
@@ -48,7 +56,7 @@ const App = () => {
         button name = '9'
         onClick = { handleClick } > 9 < /button> <
         button className = 'highlight'
-        name = 'x'
+        name = '*'
         onClick = { handleClick } > x < /button> <
         button name = '4'
         onClick = { handleClick } > 4 < /button> <
@@ -73,7 +81,7 @@ const App = () => {
         button name = '.'
         onClick = { handleClick } > . < /button> <
         button className = 'highlight'
-        onClick = { handleClick }
+        onClick = { calculate }
         id = "result" >= < /button> <
         /div>  <
         /div>  <
